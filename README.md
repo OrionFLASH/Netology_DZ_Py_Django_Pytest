@@ -32,13 +32,12 @@
    pytest
    ```
 
-4. Для **запуска сервера разработки** нужна PostgreSQL:
-   - Создайте базу, например: `netology_django_testing`.
-   - При необходимости задайте параметры в `.env` (см. `.env.example`).
-   - Выполните миграции и запуск:
+4. Для **запуска сервера разработки**:
+   - **С PostgreSQL:** создайте базу `netology_django_testing`, выполните `python manage.py migrate` и `python manage.py runserver`.
+   - **Без PostgreSQL (проверка API):** используйте файловую SQLite:
    ```bash
-   python manage.py migrate
-   python manage.py runserver
+   USE_SQLITE_FILE=1 DJANGO_SETTINGS_MODULE=django_testing.settings_test python manage.py migrate
+   USE_SQLITE_FILE=1 DJANGO_SETTINGS_MODULE=django_testing.settings_test python manage.py runserver
    ```
    - API курсов: <http://127.0.0.1:8000/api/v1/courses/>  
    - Админка: <http://127.0.0.1:8000/admin/>
