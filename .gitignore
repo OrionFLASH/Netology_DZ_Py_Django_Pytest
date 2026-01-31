@@ -1,0 +1,52 @@
+# Виртуальное окружение
+venv/
+.venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Логи и временные файлы
+log/
+*.log
+*.tmp
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# База данных
+*.sqlite3
+db.sqlite3
+
+# Миграции (раскомментировать, если не хранить в репозитории)
+# students/migrations/*.py
+# !students/migrations/__init__.py
+
+# Секреты и конфиги с данными
+.env.local
+.env.*.local
+*.pem
